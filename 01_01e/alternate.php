@@ -1,7 +1,8 @@
 <?php
 	function validate_form() {
 		if ( isset( $_POST['submit'] ) ) {
-			if ( $_POST['number'] > 0 ) {
+			$num = (int)$_POST['number'];
+			if ( is_int($num) && $num > 0 ) {
 				echo '<h3>Great job! You submitted a positive integer!</h3>';
 			} else {
 				echo '<h3>ERROR! You did not submit a positive integer.</h3>';
