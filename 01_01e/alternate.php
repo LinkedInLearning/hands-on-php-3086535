@@ -1,3 +1,16 @@
+<?php
+	function validate_form() {
+		if ( isset( $_POST['submit'] ) ) {
+			if ( $_POST['number'] > 0 ) {
+				echo '<h3>Great job! You submitted a positive integer!</h3>';
+			} else {
+				echo '<h3>ERROR! You did not submit a positive integer.</h3>';
+			}
+		}
+
+		return true;
+	}
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -6,15 +19,7 @@
 	</head>
 	<body>
 		<main>
-			<?php 
-				if ( isset( $_POST['submit'] ) ) {
-					if ( $_POST['number'] > 0 ) {
-						echo '<h3>Great job! You submitted a positive integer!</h3>';
-					} else {
-						echo '<h3>ERROR! You did not submit a positive integer.</h3>';
-					}
-				}
-			?>
+			<?php validate_form();	?>
 			<form name="submit_number" method="POST">
 				<div>
 					<label for="name">Submit a Positive Integer:</label>
