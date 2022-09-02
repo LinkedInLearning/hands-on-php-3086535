@@ -40,7 +40,7 @@
 					<td>%3$s</td>
 					<td>%4$s</td>
 					<td class="label">%5$s</td>
-					<td><a href="edit.php?name=%1$s">Edit</a> | <a href="Delete.php?name=%1$s">Delete</a>
+					<td><a href="edit.php?name=%1$s">Edit</a> | <a href="delete.php?name=%1$s">Delete</a>
 				</tr>';
 				foreach ($results as $row) {
 

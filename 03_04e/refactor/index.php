@@ -1,3 +1,4 @@
+<?php require_once( 'functions.php' ); ?>
 <!DOCTYPE html>
 <html>
 
@@ -32,7 +33,7 @@
 					$db
 				);
 
-				$results = $mysqli->query('SELECT * FROM speakers;');
+				$results = get_all_speakers($mysqli);
 
 				$format = '<tr>
 					<td>%1$s</td>

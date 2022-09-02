@@ -1,3 +1,4 @@
+<?php require_once( 'functions.php' ); ?>
 <!DOCTYPE html>
 <html>
 
@@ -8,20 +9,7 @@
 
 <body>
 	<?php
-
-	$host = '127.0.01';
-	$user = 'mariadb';
-	$pass = 'mariadb';
-	$db = 'mariadb';
-
-	$mysqli = new mysqli(
-		$host,
-		$user,
-		$pass,
-		$db
-	);
-	$name = $_GET['name'];
-	$result = $mysqli->query("DELETE FROM speakers WHERE name='$name'");
+	$result = delete_speaker($_GET['name'], $mysqli);
 
 	if ($result) {
 		echo '<h1>' . $name . ' successfully deleted.</h1>';

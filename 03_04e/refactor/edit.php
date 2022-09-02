@@ -1,22 +1,4 @@
-<?php
-
-function update_record($mysqli) {
-
-}
-
-$host = '127.0.01';
-$user = 'mariadb';
-$pass = 'mariadb';
-$db = 'mariadb';
-
-$mysqli = new mysqli(
-	$host,
-	$user,
-	$pass,
-	$db
-);
-?>
-
+<?php require_once( 'functions.php' ); ?>
 <!DOCTYPE html>
 <html>
 
@@ -35,9 +17,8 @@ $mysqli = new mysqli(
 		?>
 		<h1>Edit <?php echo $_GET['name']; ?></h1>
 		<?php
-		$name = $_GET['name'];
-
-		$results = $mysqli->query('SELECT * FROM speakers WHERE name="' . $name . '";');
+	
+		$results = get_speaker( $_GET['name'], $mysqli);
 
 		foreach ($results as $row) :
 		?>
