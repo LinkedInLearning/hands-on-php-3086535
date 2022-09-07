@@ -15,10 +15,10 @@
 			if ($result) echo '<p>Record successfully updated.</p>';
 		}
 		?>
-		<h1>Edit <?php echo $_GET['name']; ?></h1>
+		<h1>Edit Speaker</h1>
 		<?php
 	
-		$results = get_speaker( $_GET['name'], $mysqli);
+		$results = get_speaker( $_GET['id'], $mysqli);
 
 		foreach ($results as $row) :
 		?>
@@ -40,6 +40,7 @@
 					<label for="desc">Session Description:</label>
 					<textarea name="desc"><?php echo $row['session_desc']; ?></textarea>
 				</div>
+				<input type="hidden" name="id" value="<?php echo $row['id']; ?>" />
 				<input type="submit" name="submit" value="Edit Speaker" />
 			</form>
 

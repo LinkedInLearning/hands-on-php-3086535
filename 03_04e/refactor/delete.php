@@ -9,10 +9,10 @@
 
 <body>
 	<?php
-	$result = delete_speaker($_GET['name'], $mysqli);
+	$result = delete_speaker($_GET['id'], $mysqli);
 
 	if ($result) {
-		echo '<h1>' . $name . ' successfully deleted.</h1>';
+		echo '<h1> Speaker successfully deleted.</h1>';
 	} else {
 		echo '<h1>There was an issue.</h1>';
 	}
