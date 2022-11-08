@@ -1,5 +1,5 @@
 # Hands-On Introduction: PHP 
-This is the repository for the LinkedIn Learning course Hands-On Introduction: PHP . The full course is available from [LinkedIn Learning][lil-course-url].
+This is the repository for the LinkedIn Learning course Hands-On Introduction: PHP. The full course is available from [LinkedIn Learning][lil-course-url].
 
 ![Hands-On Introduction: PHP ][lil-thumbnail-url]
 
