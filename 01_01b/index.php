@@ -8,7 +8,12 @@
 		<main>
 			<?php 
 				if ( isset( $_POST['submit'] ) ) {
-					echo '<h3>Number submitted!</h3>';
+					$num = (int)$_POST['number'];
+					if(is_int($num) && $num>0) {
+						echo 'Great! you have submitted a positive number';
+					}else {
+						echo 'ERROR, you did not submit a positive integer';
+					}
 				}
 			?>
 			<form name="submit_number" method="POST">
